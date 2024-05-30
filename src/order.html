@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page - B&B-COFFEE</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bg-gray-100 font-sans">
+  <nav class="bg-amber-800 text-white p-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <img src="/src/img/logo/logocoffe.svg" alt="Coffee Shop Logo" id="logo" class="w-24 h-24">
+      <ul class="flex space-x-4">
+        <li>
+          <a href="index.html" class="text-lg font-semibold hover:text-blue-300">Home</a>
+        </li>
+        <li>
+          <a href="categoria.html" class="text-lg font-semibold hover:text-blue-300">Categories</a>
+        </li>
+        <li>
+          <a href="links.html" class="text-lg font-semibold hover:text-blue-300">Links</a>
+        </li>
+        <li>
+          <a href="order.html" class="text-lg font-semibold hover:text-blue-300">Order</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <header class="text-center mt-8">
+    <h1 class="text-4xl text-amber-800">Your Order</h1>
+  </header>
+
+  <main class="container mx-auto p-4">
+    <div id="products" class="mb-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <!-- Products will be dynamically added here -->
+    </div>
+
+    <ul id="order-list" class="list-disc pl-5 mb-4">
+        <!-- Ordered items will be dynamically added here -->
+    </ul>
+
+    <p id="order-total" class="text-lg font-bold mb-4">
+        Total: $0.00
+    </p>
+
+    <!-- Afegeix una nova secció per mostrar les comandes de l'usuari -->
+    <section id="user-orders" class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Your Orders</h2>
+        <ul id="user-orders-list" class="list-disc pl-5">
+            <!-- User orders will be dynamically added here -->
+        </ul>
+    </section>
+
+    <button id="place-order-btn" class="bg-amber-800 text-white p-2 rounded">
+        Place Order
+    </button>
+  </main>
+
+  <script type="module" src="./pages/order.js"></script>
+</body>
+</html>
