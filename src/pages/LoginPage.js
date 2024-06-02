@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(user);
         localStorage.setItem('userSession', JSON.stringify(userSession));
         localStorage.setItem('isAuthenticated', 'true');
-        // Assuming `admin` is a property of user; change if needed
         if (user.admin === true) {
           window.location.href = '../index.html';
         } else {
@@ -36,4 +35,5 @@ document.addEventListener('DOMContentLoaded', function () {
       errorMessage.style.display = 'block';
     }
   });
+  
 });

@@ -32,7 +32,25 @@ function renderNavbar(isAuthenticated) {
   }
 }
 
-// Executa la funció per renderitzar el navbar quan el DOM estigui carregat
 document.addEventListener('DOMContentLoaded', () => {
   renderNavbar(isAuthenticated());
+});
+function renderNavbar() {
+  const isAuthenticated = localStorage.getItem('userSession') !== null;
+  const logoutLink = document.getElementById('logout-link');
+
+  if (isAuthenticated) {
+    logoutLink.style.display = 'block';
+  } else {
+    logoutLink.style.display = 'none';
+  }
+
+  logoutLink.addEventListener('click', function (event) {
+    event.preventDefault(); 
+    logout(); 
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderNavbar();
 });
