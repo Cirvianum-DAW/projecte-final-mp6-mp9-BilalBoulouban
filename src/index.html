@@ -10,7 +10,7 @@
   <nav class="bg-amber-800 text-white p-4">
     <div class="container mx-auto flex items-center justify-between">
       <img src="/src/img/logo/logocoffe.svg" alt="Coffee Shop Logo" id="logo" class="w-24 h-24">
-      <ul class="flex space-x-4">
+      <ul class="flex space-x-4" id="nav-links">
         <li>
           <a href="index.html" class="text-lg font-semibold hover:text-blue-300">Home</a>
         </li>
@@ -20,11 +20,14 @@
         <li>
           <a href="links.html" class="text-lg font-semibold hover:text-blue-300">Links</a>
         </li>
-        <li>
+        <li id="login-link">
           <a href="login.html" class="text-lg font-semibold hover:text-blue-300">LogIn</a>
         </li>
         <li>
           <a href="order.html" class="text-lg font-semibold hover:text-blue-300">Order</a>
+        </li>
+        <li id="logout-link" style="display: none;">
+          <a href="#" class="text-lg font-semibold hover:text-blue-300">LogOut</a>
         </li>
       </ul>
     </div>
@@ -39,12 +42,6 @@
     />
   </header>
 
-  <!-- Your JavaScript code goes here -->
-  <!-- <script>
-    const token = localStorage.getItem('token');
-    if (!token) {
-      window.location.href = 'login.html';
-    }
-  </script> -->
+  <script type="module" src="../components/Navbar.js"></script>
 </body>
 </html>

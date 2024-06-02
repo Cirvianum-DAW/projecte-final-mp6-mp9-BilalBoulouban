@@ -1,6 +1,5 @@
 import { login } from '../services/auth.js';
 
-
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('#login-form');
   const errorMessage = document.querySelector('#error-message');
@@ -14,8 +13,15 @@ document.addEventListener('DOMContentLoaded', function () {
     try {
       console.log('Form submitted');
       const user = await login(username, password);
-
+  
       if (user) {
+        const userSession = {
+          userName: user.userName,
+          userId: user.id,
+          password: user.password,
+        };
+        console.log(user);
+        localStorage.setItem('userSession', JSON.stringify(userSession));
         localStorage.setItem('isAuthenticated', 'true');
         // Assuming `admin` is a property of user; change if needed
         if (user.admin === true) {

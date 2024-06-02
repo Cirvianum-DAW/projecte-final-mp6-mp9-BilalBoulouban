@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         const data = await response.json();
         localStorage.setItem('token', data.token);
-  
+        
         // Redirecciona a la página de dashboard después del inicio de sesión exitoso
         window.location.href = '/dashboard.html';
       } catch (error) {
